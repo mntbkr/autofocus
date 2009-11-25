@@ -12,6 +12,6 @@
 (function($) {
   $.fn.autofocus = function() {
     //Test to see if autofocus is natively supported before proceeding
-    return(this[0].autofocus!==true) ? this.focus() : this;
+    return this[0] ? ((this[0].autofocus!==true) ? this.focus() : this) : this;
   };
 })(jQuery);
